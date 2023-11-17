@@ -19,6 +19,10 @@ jobs:
       - name: Create file
         run: |
           echo "BUILD" > build.txt
+
+      - name: Check build
+        run: |
+          ls
           
   DeployDev:
     name: Deploy to Dev 
@@ -44,13 +48,14 @@ jobs:
       - name: Deploy
         run: echo I am deploying! 
         
-      - name: Check if build exists
-        run: cat build.txt
-
       - name: Check directory
         run: |
           ls
           pwd
+          
+      - name: Check if build exists
+        run: cat build.txt
+
             
   DeployProd:
     name: Deploy to Production 
