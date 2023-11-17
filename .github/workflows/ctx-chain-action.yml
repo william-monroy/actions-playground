@@ -49,9 +49,10 @@ jobs:
         run: echo I am deploying! 
         
       - name: Check directory
-        run: |
-          ls
-          pwd
+        run: ls
+          
+      - name: Check route
+        run: pwd
           
       - name: Check if build exists
         run: cat build.txt
